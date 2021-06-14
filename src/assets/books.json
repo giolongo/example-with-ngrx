@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "title": "Guida al Javascript",
+    "pages": 356,
+    "author": {
+      "name": "Fabrizio",
+      "surname": "Fallico",
+      "gender": "M"
+    }
+  },
+  {
+    "id": 2,
+    "title": "Perl per Tutti",
+    "pages": 125356,
+    "author": {
+      "name": "Salvatore",
+      "surname": "Pedalino",
+      "gender": "M"
+    }
+  },
+  {
+    "id": 3,
+    "title": "Come diventare capobranco",
+    "pages": 2,
+    "author": {
+      "name": "Orazio",
+      "surname": "Scavo",
+      "gender": "M"
+    }
+  },
+  {
+    "id": 4,
+    "title": "Guida completa al Peppapiging",
+    "pages": 75,
+    "author": {
+      "name": "Giovanni E.",
+      "surname": "Longo",
+      "gender": "M"
+    }
+  }
+]

@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="new-book-size">
+    <app-book-new [book]="bookSelected" (saveBook)="saveBook($event)"></app-book-new>
+  </div>
+  <div class="book-list-size">
+    <app-books-list [books]="books" (modify)="selectBook($event)" (refresh)="getBooks()"
+                    (remove)="remove($event)"></app-books-list>
+  </div>
+</div>

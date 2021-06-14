@@ -1,0 +1,19 @@
+<h2>Books</h2>
+<label (click)="refresh.emit()"><a href="#">Refresh</a> </label>
+<table>
+  <tr>
+    <th>Titolo</th>
+    <th>N. Pagine</th>
+    <th>Autore</th>
+    <th>Action</th>
+  </tr>
+  <tr *ngFor="let book of books">
+    <td>{{book.title}}</td>
+    <td>{{book.pages}}</td>
+    <td>{{book.author.name_with_prefix}}</td>
+    <td>
+      <a href="#" class="d-block" (click)="modify.emit(book)"> Modifica</a>
+      <a href="#" class="d-block" (click)="remove.emit(book.id)"> Elimina</a>
+    </td>
+  </tr>
+</table>
