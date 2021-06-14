@@ -9,8 +9,9 @@ import {BooksListComponent} from './components/books-list/books-list.component';
 import {BookNewComponent} from './components/book-new/book-new.component';
 import {FormsModule} from '@angular/forms';
 import {StoreModule} from '@ngrx/store';
-import {metaReducers, reducers} from './reducers';
 import {booksFeatureKey, booksReducer} from './store/reducers/books.reducer';
+import {EffectsModule} from '@ngrx/effects';
+import {BooksEffect} from './store/effects/books.effect';
 
 @NgModule({
   declarations: [
@@ -24,9 +25,12 @@ import {booksFeatureKey, booksReducer} from './store/reducers/books.reducer';
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
-    StoreModule.forFeature(booksFeatureKey, booksReducer)
+    StoreModule.forRoot({}),
+    StoreModule.forFeature(booksFeatureKey, booksReducer),
+    EffectsModule.forRoot([BooksEffect])
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

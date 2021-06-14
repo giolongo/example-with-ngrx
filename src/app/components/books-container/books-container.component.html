@@ -3,7 +3,7 @@
     <app-book-new [book]="bookSelected" (saveBook)="saveBook($event)"></app-book-new>
   </div>
   <div class="book-list-size">
-    <app-books-list [books]="books" (modify)="selectBook($event)" (refresh)="getBooks()"
+    <app-books-list [books]="books$ | async" (modify)="selectBook($event)" (refresh)="getBooks()"
                     (remove)="remove($event)"></app-books-list>
   </div>
 </div>
